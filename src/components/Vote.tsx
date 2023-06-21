@@ -15,6 +15,7 @@ const Vote:FC<Props> = ({id}) => {
             if(res.status != 201) {
                 setErrorText('Napaka pri glasovanju');
                 console.log(res.data);
+                console.log("Error text: " + errorText);
             }
 
             if(res.status == 201) {

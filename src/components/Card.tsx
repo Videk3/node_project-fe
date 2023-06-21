@@ -1,5 +1,7 @@
 import Vote from "./Vote.tsx";
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 const Card = ({cardData}) => {
   return (
       <>
