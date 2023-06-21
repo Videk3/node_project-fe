@@ -1,3 +1,15 @@
+import {Button} from "react-bootstrap";
+import axios from "axios";
+
+const signout = async () => {
+    const res = await axios.post(`http://localhost:3000/auth/logout`, null, {withCredentials: true});
+    console.log(res);
+
+    if(res.status == 201) {
+        window.location.href = '/login';
+    }
+}
+
 const Header = () => {
     return(
         <>
@@ -60,15 +72,20 @@ const Header = () => {
                         <div className="row">
                             <div className="col-sm-8 col-md-7 py-4">
                                 <h4>About</h4>
-                                <p className="text-body-secondary">Aplikacija za objavjanje blogov</p>
+                                <p className="text-body-secondary">Lunch voting app</p>
                             </div>
                             <div className="col-sm-4 offset-md-1 py-4">
-                                <h4>Contact</h4>
+                                <h4>Menu</h4>
                                 <ul className="list-unstyled">
                                     <li><a href="/" className="text-white">Home</a></li>
                                     <li><a href="/login" className="text-white">Login</a></li>
                                     <li><a href="/register" className="text-white">Register</a></li>
-                                    <li><a href="/create" className="text-white">New lunch</a></li>
+                                    <li><a href="/create" className="text-white">Add new lunch</a></li>
+                                    <li>
+                                        <Button className="text-white" onClick={signout}>
+                                        Logout
+                                        </Button>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
