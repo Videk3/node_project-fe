@@ -5,6 +5,7 @@ import Login from "./pages/Login.tsx";
 import Wrapper from "./components/Wrapper.tsx";
 import Home from "./pages/Home.tsx";
 import NewLunch from "./pages/NewLunch.tsx";
+import Logout from "./pages/Logout.tsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
                       <Route path={'/'} element={<Home />}/>
                       <Route path={'/login'} element={<Login />}/>
                       <Route path={'/register'} element={<Register />}/>
+                      <Route path={'/logout'} element={<Logout />}/>
                       <Route path={'/create'} element={<NewLunch />}/>
                   </Routes>
               </BrowserRouter>
