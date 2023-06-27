@@ -5,6 +5,7 @@ import Login from "./pages/Login.tsx";
 import Wrapper from "./components/Wrapper.tsx";
 import Home from "./pages/Home.tsx";
 import NewLunch from "./pages/NewLunch.tsx";
+import MostVotesToday from "./pages/MostVotesToday.tsx";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
                       <Route path={'/login'} element={<Login />}/>
                       <Route path={'/register'} element={<Register />}/>
                       <Route path={'/create'} element={<NewLunch />}/>
+                      <Route path={'/mostvotes'} element={<MostVotesToday />}/>
                   </Routes>
               </BrowserRouter>
           </Wrapper>

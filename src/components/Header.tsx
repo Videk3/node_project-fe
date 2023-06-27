@@ -81,6 +81,7 @@ const Header = () => {
                                     <li><a href="/login" className="text-white">Login</a></li>
                                     <li><a href="/register" className="text-white">Register</a></li>
                                     <li><a href="/create" className="text-white">Add new lunch</a></li>
+                                    <li><a href="/mostvotes" className="text-white">Most voted today</a></li>
                                     <li>
                                         <Button className="text-white" onClick={signout}>
                                         Logout
