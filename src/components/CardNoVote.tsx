@@ -12,7 +12,7 @@ const Card = ({cardData}) => {
                       <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
                   </svg>
                   <div className="card-body">
-                      <p className="card-text">{cardData.name}</p>
+                      <p className="card-text">{cardData}</p>
                       <div className="d-flex justify-content-between align-items-center">
                       </div>
                   </div>
