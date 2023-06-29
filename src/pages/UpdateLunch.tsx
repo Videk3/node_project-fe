@@ -20,10 +20,10 @@ const UpdateLunch = () => {
         const res = await axios.patch(`http://localhost:3000/lunches/${id}`, data, {withCredentials: true});
         console.log(res);
 
-        if(res.status == 201) {
+        if(res.status == 200) {
             setRedirect(true);
         }
-        if(res.status != 201){
+        if(res.status != 200){
             setErrorText('Napaka v podatkih');
         }
     }

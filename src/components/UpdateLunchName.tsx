@@ -14,7 +14,7 @@ const UpdateLunch: FC<Props> = ({ id }) => {
         try {
             const res = await axios.get(`http://localhost:3000/lunches/${id}`, { withCredentials: true });
             console.log(res.data);
-            console.log(id);
+            console.log(errorText);
             navigate(`/updatelunch/${id}`);
         } catch (error) {
             setErrorText("An error occurred while fetching the data.");
