@@ -6,6 +6,7 @@ import Wrapper from "./components/Wrapper.tsx";
 import Home from "./pages/Home.tsx";
 import NewLunch from "./pages/NewLunch.tsx";
 import MostVotesToday from "./pages/MostVotesToday.tsx";
+import UpdateLunch from "./pages/UpdateLunch.tsx";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
                       <Route path={'/register'} element={<Register />}/>
                       <Route path={'/create'} element={<NewLunch />}/>
                       <Route path={'/mostvotes'} element={<MostVotesToday />}/>
+                      <Route path='/updatelunch/:id' element={<UpdateLunch />}/>
                   </Routes>
               </BrowserRouter>
           </Wrapper>

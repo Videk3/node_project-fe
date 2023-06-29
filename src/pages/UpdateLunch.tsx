@@ -1,13 +1,9 @@
 import './Register.css';
-import {FC, SyntheticEvent, useState} from "react";
+import {SyntheticEvent, useState} from "react";
 import axios from "axios";
-import {Navigate} from "react-router-dom";
-
-interface Props {
-    id: number;
-}
-
-const UpdateLunch:FC<Props> = ({id}) => {
+import {Navigate, useParams} from "react-router-dom";
+const UpdateLunch = () => {
+    const { id } = useParams();
 
     const[name, setName] = useState('');
 

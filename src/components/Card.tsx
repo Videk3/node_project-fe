@@ -1,9 +1,10 @@
 import Vote from "./Vote.tsx";
+import UpdateLunchName from "./UpdateLunchName.tsx";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 const Card = ({cardData}) => {
-  return (
+    return (
       <>
           <div className="col">
               <div className="card shadow-sm">
@@ -18,8 +19,7 @@ const Card = ({cardData}) => {
                       <div className="d-flex justify-content-between align-items-center">
                           <div className="btn-group">
                               <Vote  id={cardData.id}/>
-                              <button type="button" className="btn btn-sm btn-outline-secondary">Edit
-                              </button>
+                              <UpdateLunchName id={cardData.id}/>
                           </div>
                       </div>
                   </div>
