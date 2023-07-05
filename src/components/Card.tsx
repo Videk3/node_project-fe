@@ -1,5 +1,6 @@
 import Vote from "./Vote.tsx";
 import UpdateLunchName from "./UpdateLunchName.tsx";
+import DeleteLunch from "./DeleteLunch.tsx";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -20,6 +21,7 @@ const Card = ({cardData}) => {
                           <div className="btn-group">
                               <Vote  id={cardData.id}/>
                               <UpdateLunchName id={cardData.id}/>
+                              <DeleteLunch id={cardData.id}/>
                           </div>
                       </div>
                   </div>
