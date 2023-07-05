@@ -3,11 +3,7 @@ import { SyntheticEvent, useState } from "react";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 
-interface LoginProps {
-    setIsLoggedIn: (isLoggedIn: boolean) => void;
-}
-
-const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
+const Login = () => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const [redirect, setRedirect] = useState(false);
@@ -25,7 +21,6 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) => {
             const res = await axios.post('http://localhost:3000/auth/login', data, { withCredentials: true });
 
             if (res.status === 201) {
-                setIsLoggedIn(true);
                 localStorage.setItem('isLoggedIn', 'true');
                 setRedirect(true);
             } else {

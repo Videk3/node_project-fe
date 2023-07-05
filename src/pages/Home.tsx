@@ -4,8 +4,8 @@ import Album from "../components/Album.tsx";
 const Home = () => {
     return(
         <>
-                <Welcome />
-                <Album />
+            <Welcome />
+            <Album />
         </>
     )
 }
